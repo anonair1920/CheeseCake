@@ -14,11 +14,12 @@ const Post = ({ data }) => {
 };
 
 export const getServerSideProps = async () => {
-  const data = fs.readFileSync('data.json').toString();
+  const data = fs.readFileSync("data.json").toString();
   return {
     props: {
       data,
     },
   };
 };
+
 export default Post;

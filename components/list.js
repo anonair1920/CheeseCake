@@ -1,6 +1,6 @@
 import React from "react";
-import SelectBox from "./slectBox";
 import Job from "./job";
+
 export default function List({ results }) {
   return (
     <div>
@@ -35,15 +35,11 @@ export default function List({ results }) {
                     >
                     
                     </th>{" "}
-                    {/* <th
-                      scope="col"
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                    </th> */}
+                   
                   </tr>
                 </thead>
                 {results.map((result) => {
-                  return <Job result={result}></Job>;
+                  return <Job key={result} result={result}></Job>;
                 })}
               </table>  
             </div>
